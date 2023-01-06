@@ -33,9 +33,9 @@ Users should be able to:
 ### Screenshot
 
 > Desktop output
-![](.screenshot/screenshot1.png)
+![image](.screenshot/screenshot2.png)
 > Mobile output
-![](.screenshot/screenshot2.png)
+![image](.screenshot/screenshot2.png)
 
 
 
