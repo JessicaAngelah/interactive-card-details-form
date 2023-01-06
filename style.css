@@ -1,0 +1,253 @@
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+*,*>*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+.hidden{
+    display: none !important;
+}
+.container{
+    align-items: center;
+    display: flex;
+}
+.leftsec{
+    background-image: url('./images/bg-main-desktop.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    width: 40%;
+}
+.cards{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%,-50%);
+}
+.frontcard{
+    position: relative;
+    transform: translateX(-100px);
+}
+
+.clogo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+#number{
+    position: absolute;
+    color: var(white);
+    bottom: 5rem;
+    left: 1rem;
+    letter-spacing: 2px;
+}
+.cinfo{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: var(white);
+    justify-content: space-between;
+}
+.backcard{
+    position: relative;
+}
+.error{
+    border: 2px solid Red;
+}
+.error_message{
+    gap: 0;
+}
+.error_message::after{
+    content: "Please fill up the form";
+    color: red;
+    margin-top: .2rem;
+}
+#cvc{
+    position: absolute;
+    right: 3.5rem;
+    top: 7rem;
+    color: var(#dedddf);
+}
+.rightsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.rightsection form{
+   display: grid;
+   gap: 1rem;
+   width: 350px;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-rows: repeat(4,1fr);
+}
+label{
+    color: var(#21092f);
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+}
+input{
+    padding: .5rem;
+    font-size: 18px;
+    border: 1px solid var(#4e0f70);
+    border-radius: 6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder{
+    font-family: inherit;
+    color: var(#4e0f70);
+}
+input:focus{
+    outline-color: #6448fe;
+}
+.grid1{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.grid2{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.grid3{
+    display: flex;
+    flex-direction: column;
+}
+.grid4{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+
+.cardinformation{
+    display: flex;
+    grid-column: 2 span;
+    gap: 1rem;
+}
+#carddate{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+#carddate .two_inp{
+    display: flex;
+}
+.two_inp div{
+    flex-direction: column;
+}
+#carddate div input{
+    width: 70px;
+    margin-inline: .5rem;
+    margin-left: 0;
+}
+#cardcvc{
+    width: 100%;
+}
+form button{
+    grid-column: 2 span;
+    font-size: 18px;
+    height: 50px;
+    color: var(white);
+    border-radius: 6px;
+    background: var(#21092f);
+    cursor: pointer;
+}
+.submit_btn{
+    background-color:#dedddf;
+    color:#21092f;
+    font-weight: bold;
+}
+.submit_btn:hover{
+    background-color:#4e0f70;
+    color:#dedddf;
+    font-weight: bold;
+}
+.thank{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.thank h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.thank p{
+    font-size: 18px;
+    color: var(#4e0f70);
+}
+.thank button{
+    color: var(white);
+    width: 100%;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 18px;
+    background-color: var(#21092f);
+    cursor: pointer;
+}
+@media screen and (max-width:1023px) {
+    .frontcard .card_container img,.frontcard,.backcard img,.backcard{
+        width: 300px;
+    }
+    .clogo{
+        width: 50px;
+    }
+    #number{
+        font-size: 1.1rem;
+    }
+    #cvc{
+        top: 42%;
+        right: 12%;
+    }
+}
+@media screen and (max-width:767px) {
+    .container{
+        flex-direction: column;
+    }
+    .frontcard .card_container img,.frontcard,.backcard img,.backcard{
+        width: 280px;
+    }
+    .leftsec{
+        width: 100%;
+        min-height: 30vh;
+        background-image: url('./images/bg-main-mobile.png');
+    }
+    .cards{
+        flex-direction: column-reverse;
+        left: 61%;
+        top: 60%;
+        gap: 0;
+    }
+    .backcard{
+        transform: translateY(70px);
+    }
+    .frontcard{
+        z-index: 100;
+    }
+    .rightsection{
+        margin-top: 6rem;
+    }
+    
+}
